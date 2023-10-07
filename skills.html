@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Habilidades</title>
+</head>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Oyu</a></li>
+        <li><a href="aboutme.html">Sobre mi</a></li>
+        <li><a href="education.html">Estudios</a></li>
+        <li><a href="skills.html">Habilidades</a></li>
+        <li><a href="experience.html">Experiencia</a></li>
+    </ul>
+</nav>
+
+<h1>Habilidades</h1>
+
+    <div id="semi-container" style="width: 10%; height: 10%; position: absolute; bottom: 480px; left: 50%; transform: translateX(-50%);"></div>
+    <div id="semi-container1" style="width: 10%; height: 10%; position: absolute; bottom: 480px; left: 50%; transform: translateX(-50%);"></div>
+    <div id="semi-container2" style="width: 10%; height: 10%; position: absolute; bottom: 480px; left: 50%; transform: translateX(-50%);"></div>
+    <div id="semi-container3" style="width: 10%; height: 10%; position: absolute; bottom: 480px; left: 50%; transform: translateX(-50%);"></div>
+    <div id="semi-container4" style="width: 10%; height: 10%; position: absolute; bottom: 480px; left: 50%; transform: translateX(-50%);"></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.1.0/progressbar.min.js"></script>
+    <script>
+
+        var semiBar = new ProgressBar.SemiCircle('#semi-container', {
+            color: 'orange',
+            strokeWidth: 10,
+            trailWidth: 0.5,
+            easing: 'bounce'
+        });
+
+        semiBar.animate(1, {
+            duration: 3000
+        });
+
+        var semiBar = new ProgressBar.SemiCircle('#semi-container2', {
+            color: 'blue',
+            strokeWidth: 10,
+            trailWidth: 0.5,
+            easing: 'bounce'
+        });
+
+        semiBar.animate(1, {
+            duration: 3000
+        });
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
