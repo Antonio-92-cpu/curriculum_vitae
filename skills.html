@@ -41,7 +41,7 @@
     </ul>
 </nav>
 
-<h1>Habilidades</h1>
+<h1 class="text">Habilidades</h1>
 
 <div id="barra-de-progreso" style="justify-content: center;">
 
@@ -56,7 +56,7 @@
     <script>
 
         var semiBar = new ProgressBar.SemiCircle('#semi-container', {
-            color: 'orange',
+            color: '#e65127',
             strokeWidth: 10,
             trailWidth: 0.5,
             easing: 'bounce'
@@ -67,7 +67,7 @@
         });
 
         var semiBar = new ProgressBar.SemiCircle('#semi-container1', {
-            color: 'orange',
+            color: '#0c73b8',
             strokeWidth: 10,
             trailWidth: 0.5,
             easing: 'bounce'
@@ -78,7 +78,7 @@
         });
 
         var semiBar = new ProgressBar.SemiCircle('#semi-container2', {
-            color: 'blue',
+            color: '#e7a328',
             strokeWidth: 10,
             trailWidth: 0.5,
             easing: 'bounce'
@@ -89,24 +89,24 @@
         });
 
         var semiBar = new ProgressBar.SemiCircle('#semi-container3', {
-            color: 'blue',
+            color: '#3178c8',
             strokeWidth: 10,
             trailWidth: 0.5,
             easing: 'bounce'
         });
 
-        semiBar.animate(1, {
+        semiBar.animate(0.5, {
             duration: 3000
         });
 
     var barra1Text = document.createElement('div');
     barra1Text.classList.add('porcentaje-text');
-    barra1Text.innerHTML = '80%';
+    barra1Text.innerHTML = '90%';
     document.querySelector('#semi-container').appendChild(barra1Text);
 
     var barra2Text = document.createElement('div');
     barra2Text.classList.add('porcentaje-text');
-    barra2Text.innerHTML = '90%';
+    barra2Text.innerHTML = '80%';
     document.querySelector('#semi-container1').appendChild(barra2Text);
 
     var barra3Text = document.createElement('div');
@@ -116,7 +116,7 @@
 
     var barra4Text = document.createElement('div');
     barra4Text.classList.add('porcentaje-text');
-    barra4Text.innerHTML = '95%';
+    barra4Text.innerHTML = '50%';
     document.querySelector('#semi-container3').appendChild(barra4Text);
 
     var barra1Text = document.createElement('div');
