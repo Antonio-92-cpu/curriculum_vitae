@@ -10,11 +10,10 @@
         #barra-de-progreso {
             display: flex;
             align-items: center;
-            justify-content: space-around; 
         }
 
         .barra-de-progreso-item {
-            margin-right: 0px; 
+            margin-right: 40px; 
         }
     </style>
 </head>
@@ -31,13 +30,12 @@
 
 <h1>Habilidades</h1>
 
-<div id="barra-de-progreso">
+<div id="barra-de-progreso" style="justify-content: center;">
 
     <div id="semi-container"  class="barra-de-progreso-item" style="width: 10%; height: 10%;"></div>
     <div id="semi-container1" class="barra-de-progreso-item" style="width: 10%; height: 10%;"></div>
     <div id="semi-container2" class="barra-de-progreso-item" style="width: 10%; height: 10%;"></div>
     <div id="semi-container3" class="barra-de-progreso-item" style="width: 10%; height: 10%;"></div>
-    <div id="semi-container4" class="barra-de-progreso-item" style="width: 10%; height: 10%;"></div>
 </div>
 
 
@@ -45,6 +43,17 @@
     <script>
 
         var semiBar = new ProgressBar.SemiCircle('#semi-container', {
+            color: 'orange',
+            strokeWidth: 10,
+            trailWidth: 0.5,
+            easing: 'bounce'
+        });
+
+        semiBar.animate(1, {
+            duration: 3000
+        });
+
+        var semiBar = new ProgressBar.SemiCircle('#semi-container1', {
             color: 'orange',
             strokeWidth: 10,
             trailWidth: 0.5,
