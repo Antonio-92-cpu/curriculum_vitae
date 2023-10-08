@@ -21,11 +21,21 @@
         .porcentaje-text {
             font-size: 18px; 
             margin-top: 5px; 
+            color: white;
         }
 
         .text {
             font-size: 18px; 
-            margin-top: 10px; 
+            margin-top: 10px;
+            color: white;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        h1 .texts{
+            color: white;
         }
 
     </style>
@@ -41,7 +51,15 @@
     </ul>
 </nav>
 
-<h1 class="text">Habilidades</h1>
+<h1 style="color: white;">Habilidades</h1>
+
+<div id="barra-de-progreso" style="justify-content: center;">
+
+    <div id="semi-container"  class="barra-de-progreso-item" style="width: 10%; height: 10%;"></div>
+    <div id="semi-container1" class="barra-de-progreso-item" style="width: 10%; height: 10%;"></div>
+    <div id="semi-container2" class="barra-de-progreso-item" style="width: 10%; height: 10%;"></div>
+    <div id="semi-container3" class="barra-de-progreso-item" style="width: 10%; height: 10%;"></div>
+</div>
 
 <div id="barra-de-progreso" style="justify-content: center;">
 
@@ -58,40 +76,40 @@
         var semiBar = new ProgressBar.SemiCircle('#semi-container', {
             color: '#e65127',
             strokeWidth: 10,
-            trailWidth: 0.5,
+            trailWidth: 9,
             easing: 'bounce'
         });
 
-        semiBar.animate(1, {
+        semiBar.animate(0.9, {
             duration: 3000
         });
 
         var semiBar = new ProgressBar.SemiCircle('#semi-container1', {
             color: '#0c73b8',
             strokeWidth: 10,
-            trailWidth: 0.5,
+            trailWidth: 9,
             easing: 'bounce'
         });
 
-        semiBar.animate(1, {
+        semiBar.animate(0.8, {
             duration: 3000
         });
 
         var semiBar = new ProgressBar.SemiCircle('#semi-container2', {
             color: '#e7a328',
             strokeWidth: 10,
-            trailWidth: 0.5,
+            trailWidth: 9,
             easing: 'bounce'
         });
 
-        semiBar.animate(1, {
+        semiBar.animate(0.75, {
             duration: 3000
         });
 
         var semiBar = new ProgressBar.SemiCircle('#semi-container3', {
             color: '#3178c8',
             strokeWidth: 10,
-            trailWidth: 0.5,
+            trailWidth: 9,
             easing: 'bounce'
         });
 
@@ -140,6 +158,95 @@
     document.querySelector('#semi-container3').appendChild(barra4Text);
 
     </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.1.0/progressbar.min.js"></script>
+<script>
+
+    var semiBar = new ProgressBar.SemiCircle('#semi-container', {
+        color: '#e65127',
+        strokeWidth: 10,
+        trailWidth: 9,
+        easing: 'bounce'
+    });
+
+    semiBar.animate(0.9, {
+        duration: 3000
+    });
+
+    var semiBar = new ProgressBar.SemiCircle('#semi-container1', {
+        color: '#0c73b8',
+        strokeWidth: 10,
+        trailWidth: 9,
+        easing: 'bounce'
+    });
+
+    semiBar.animate(0.8, {
+        duration: 3000
+    });
+
+    var semiBar = new ProgressBar.SemiCircle('#semi-container2', {
+        color: '#e7a328',
+        strokeWidth: 10,
+        trailWidth: 9,
+        easing: 'bounce'
+    });
+
+    semiBar.animate(0.75, {
+        duration: 3000
+    });
+
+    var semiBar = new ProgressBar.SemiCircle('#semi-container3', {
+        color: '#3178c8',
+        strokeWidth: 10,
+        trailWidth: 9,
+        easing: 'bounce'
+    });
+
+    semiBar.animate(0.5, {
+        duration: 3000
+    });
+
+var barra1Text = document.createElement('div');
+barra1Text.classList.add('porcentaje-text');
+barra1Text.innerHTML = '90%';
+document.querySelector('#semi-container').appendChild(barra1Text);
+
+var barra2Text = document.createElement('div');
+barra2Text.classList.add('porcentaje-text');
+barra2Text.innerHTML = '80%';
+document.querySelector('#semi-container1').appendChild(barra2Text);
+
+var barra3Text = document.createElement('div');
+barra3Text.classList.add('porcentaje-text');
+barra3Text.innerHTML = '75%';
+document.querySelector('#semi-container2').appendChild(barra3Text);
+
+var barra4Text = document.createElement('div');
+barra4Text.classList.add('porcentaje-text');
+barra4Text.innerHTML = '50%';
+document.querySelector('#semi-container3').appendChild(barra4Text);
+
+var barra1Text = document.createElement('div');
+barra1Text.classList.add('text');
+barra1Text.innerHTML = 'HTML';
+document.querySelector('#semi-container').appendChild(barra1Text);
+
+var barra2Text = document.createElement('div');
+barra2Text.classList.add('text');
+barra2Text.innerHTML = 'CSS';
+document.querySelector('#semi-container1').appendChild(barra2Text);
+
+var barra3Text = document.createElement('div');
+barra3Text.classList.add('text');
+barra3Text.innerHTML = 'JavaScript';
+document.querySelector('#semi-container2').appendChild(barra3Text);
+
+var barra4Text = document.createElement('div');
+barra4Text.classList.add('text');
+barra4Text.innerHTML = 'TypeScript';
+document.querySelector('#semi-container3').appendChild(barra4Text);
+
+</script>
     
 </body>
 </html>
