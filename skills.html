@@ -10,11 +10,24 @@
         #barra-de-progreso {
             display: flex;
             align-items: center;
+            justify-content: center;
         }
 
         .barra-de-progreso-item {
             margin-right: 40px; 
+            text-align: center;
         }
+
+        .porcentaje-text {
+            font-size: 18px; 
+            margin-top: 5px; 
+        }
+
+        .text {
+            font-size: 18px; 
+            margin-top: 10px; 
+        }
+
     </style>
 </head>
 
@@ -85,6 +98,46 @@
         semiBar.animate(1, {
             duration: 3000
         });
+
+    var barra1Text = document.createElement('div');
+    barra1Text.classList.add('porcentaje-text');
+    barra1Text.innerHTML = '80%';
+    document.querySelector('#semi-container').appendChild(barra1Text);
+
+    var barra2Text = document.createElement('div');
+    barra2Text.classList.add('porcentaje-text');
+    barra2Text.innerHTML = '90%';
+    document.querySelector('#semi-container1').appendChild(barra2Text);
+
+    var barra3Text = document.createElement('div');
+    barra3Text.classList.add('porcentaje-text');
+    barra3Text.innerHTML = '75%';
+    document.querySelector('#semi-container2').appendChild(barra3Text);
+
+    var barra4Text = document.createElement('div');
+    barra4Text.classList.add('porcentaje-text');
+    barra4Text.innerHTML = '95%';
+    document.querySelector('#semi-container3').appendChild(barra4Text);
+
+    var barra1Text = document.createElement('div');
+    barra1Text.classList.add('text');
+    barra1Text.innerHTML = 'HTML';
+    document.querySelector('#semi-container').appendChild(barra1Text);
+
+    var barra2Text = document.createElement('div');
+    barra2Text.classList.add('text');
+    barra2Text.innerHTML = 'CSS';
+    document.querySelector('#semi-container1').appendChild(barra2Text);
+
+    var barra3Text = document.createElement('div');
+    barra3Text.classList.add('text');
+    barra3Text.innerHTML = 'JavaScript';
+    document.querySelector('#semi-container2').appendChild(barra3Text);
+
+    var barra4Text = document.createElement('div');
+    barra4Text.classList.add('text');
+    barra4Text.innerHTML = 'TypeScript';
+    document.querySelector('#semi-container3').appendChild(barra4Text);
 
     </script>
     
