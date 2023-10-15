@@ -181,6 +181,40 @@
                 <td>Aldalid</td>
         </tbody>
     </table>
-    
+ 
+    <script>
+        function searchTable() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.querySelector("table"); // Selecciona la primera tabla (puedes ajustarla si tienes más tablas)
+            tr = table.getElementsByTagName("tr");
+            var resultsFound = false; // Variable para rastrear si se encontraron resultados
+        
+            for (i = 1; i < tr.length; i++) { // Comienza en 1 para omitir la fila de encabezado
+                td = tr[i].getElementsByTagName("td");
+                for (var j = 0; j < td.length; j++) {
+                    var cell = td[j];
+                    if (cell) {
+                        txtValue = cell.textContent || cell.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                            resultsFound = true;
+                            break; // Mostrar la fila y pasar a la siguiente
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+        
+            // Mostrar un mensaje de alerta si no se encontraron resultados
+            if (!resultsFound) {
+                alert("La búsqueda que has realizado no existe");
+            }
+        }
+        </script>
+        
+
 </body>
 </html>
