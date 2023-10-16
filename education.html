@@ -33,12 +33,19 @@
     </nav>
 
     <h1>FORMACIÓN</h1>
-        <form>
-            <label for="searchInput">Buscar:</label>
-            <input type="text" id="searchInput" oninput="searchTable()" placeholder="Escribe para buscar...">
-        </form>
+
+    <form>
+        <label for="searchInputAcademica">Buscar en Formación Académica:</label>
+        <input type="text" id="searchInputAcademica" oninput="searchTable('tablaAcademica')" placeholder="Escribe para buscar...">
+    </form>
+
+    <form>
+        <label for="searchInputComplementaria">Buscar en Formación Complementaria:</label>
+        <input type="text" id="searchInputComplementaria" oninput="searchTable('tablaComplementaria')" placeholder="Escribe para buscar...">
+    </form>
+          
     
-    <table border="1">
+    <table border="1" id="tablaAcademica">
         <thead>
             <tr>
                 <th colspan="5">FORMACIÓN ACADÉMICA</th>
@@ -118,7 +125,7 @@
         </tbody>
     </table>
     <br>
-    <table border="1">
+    <table border="1" id="tablaComplementaria">
         <thead>
             <tr>
                 <th colspan="5">FORMACIÓN COMPLEMENTARIA</th>
@@ -202,11 +209,11 @@
     </table>
  
     <script>
-        function searchTable() {
+        function searchTable(tableId) {
             var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("searchInput");
+            input = document.getElementById(tableId === 'tablaAcademica' ? "searchInputAcademica" : "searchInputComplementaria");
             filter = input.value.toUpperCase();
-            table = document.querySelector("table"); // Selecciona la primera tabla (puedes ajustarla si tienes más tablas)
+            table = document.getElementById(tableId); 
             tr = table.getElementsByTagName("tr");
             var resultsFound = false; // Variable para rastrear si se encontraron resultados
         
@@ -233,7 +240,16 @@
             }
         }
         </script>
-        
-
 </body>
 </html>
+
+
+
+    <table border="1" id="tablaAcademica">
+        <!-- Tu tabla de Formación Académica -->
+    </table>
+    <br>
+    <table border="1" id="tablaComplementaria">
+        <!-- Tu tabla de Formación Complementaria -->
+    </table>
+ 
