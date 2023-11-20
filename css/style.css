@@ -46,3 +46,18 @@ th, td {
 .text{
     font-weight: bold;
 }
+
+span.maquinadeescribir {
+    background-color: aquamarine;
+    position: relative;
+}
+
+.maquinadeescribir::after {
+    content: "";
+    border: 2px solid black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+
+}
