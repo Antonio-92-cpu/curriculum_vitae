@@ -21,11 +21,27 @@
 
 <h1>Sobre mi</h1>
 
-<p>Soy un creativo informático  <span class="maquinadeescribir"> capaz de realizar magia con un ordenador.</span> <br> 
+<p>Soy un creativo informático capaz de realizar magia con un ordenador.<br> 
 Mi amplia experiencia abarca diversos campos, desde las artes gráficas hasta la informática y la programación.<br>
 Estoy preparado para cambiar el mundo desde cualquier PC, respaldado por un extenso bagaje de conocimientos relacionados con la informática.<br>
 Mi experiencia abarca diversas áreas, incluyendo seguridad informática, recuperación de datos, y mucho más.<br>
-Estoy listo para aportar mis habilidades y experiencia a cualquier desafío informático que se presente.</span></span></p>
+Estoy listo para aportar mis habilidades y experiencia a cualquier desafío informático que se presente.</p>
+
+<script>
+    const text = "Soy un creativo informático capaz de realizar magia con un ordenador. Mi amplia experiencia abarca diversos campos, desde las artes gráficas hasta la informática y la programación.Estoy preparado para cambiar el mundo desde cualquier PC, respaldado por un extenso bagaje de conocimientos relacionados con la informática. Mi experiencia abarca diversas áreas, incluyendo seguridad informática, recuperación de datos, y mucho más. Estoy listo para aportar mis habilidades y experiencia a cualquier desafío informático que se presente.";
+let index = 0;
+
+function typeEffect() {
+  const element = document.querySelector('.typewriter');
+  if (index < text.length) {
+    element.textContent += text.charAt(index);
+    index++;
+    setTimeout(typeEffect, 100);
+  }
+}
+
+typeEffect();
+</script>
 
 </body>
 </html>

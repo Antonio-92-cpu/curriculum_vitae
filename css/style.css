@@ -47,28 +47,22 @@ th, td {
     font-weight: bold;
 }
 
-span.maquinadeescribir {
-    background-color: white;
-    position: relative;
-}
-
-.maquinadeescribir::after {
-    content: "";
-    background-color: white;
-    border-left: 3px solid black;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    animation: maquinaescribir 2s infinite alternate steps(502);
-
-}
-
-@keyframes maquinaescribir {
-    from {
-        width: 100%;
-    }    
-    to {
-        width: 0%;
-    }
-}
+.typewriter {
+    overflow: hidden; /* Para ocultar el texto que aún no se ha mostrado */
+    border-right: .15em solid orange; /* Efecto de cursor */
+    white-space: nowrap; /* Para que el texto no se divida en varias líneas */
+    letter-spacing: .15em; /* Espaciado entre letras */
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  }
+  
+  /* Animación de escribir */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* Animación del cursor parpadeante */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
