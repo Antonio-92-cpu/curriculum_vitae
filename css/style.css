@@ -48,14 +48,14 @@ th, td {
 }
 
 span.maquinadeescribir {
-    background-color: aquamarine;
+    background-color: white;
     position: relative;
 }
 
 .maquinadeescribir::after {
     content: "";
-    background-color: red;
-    /*border: 2px solid black;*/
+    background-color: white;
+    border-left: 3px solid black;
     right: 0;
     width: 100%;
     height: 100%;
